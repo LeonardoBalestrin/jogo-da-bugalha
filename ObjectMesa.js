@@ -1,9 +1,3 @@
-arrExemplo1=[1,2,3];
-arrExemplo2=[6,6,6];
-arrExemplo3=[3,4,5];
-arrExemplo4=[0,0,0];
-arrExemplo5=[0,0,0];
-
 //criação do Objeto Mesa dos jogadores
 function Mesa(arr1,arr2,arr3){
     this.cols=[arr1,arr2,arr3];
@@ -43,8 +37,5 @@ Mesa.prototype.DeleteNumberOfCollumn = function(idxCol,number){
     this.cols[idxCol] = this.cols[idxCol].map(value => value === number ? 0 : value);
     this.sumPointsCols();
 }
-
-let mesa1 = new Mesa(arrExemplo1,arrExemplo2,arrExemplo3);
-let mesa2 = new Mesa(arrExemplo5,arrExemplo4,arrExemplo2);
 
 module.exports = Mesa;
